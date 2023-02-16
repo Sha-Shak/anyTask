@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-list.component.css']
 })
 export class CardListComponent {
-
+  loop: number[] = [1,2,3,4,5,6,7,8,9,0,1]
 }

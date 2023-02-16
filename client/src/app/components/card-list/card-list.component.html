@@ -1,1 +1,5 @@
-<p>card-list works!</p>
+<div class="flex-wrap">
+  <div *ngFor="let num of loop">
+    <app-card [num]="num" class="bg-pink-400"></app-card>
+  </div>
+</div>
