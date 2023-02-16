@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  // for later
+  /*
+  task!:{
+    id: string,
+    task: string,
+    time: string,
+    subTasks?: []
+    author: string,
+  }
+
+  subTask!:{
+    task: string,
+    time: string,
+  }
+  */
 }
