@@ -1,10 +1,9 @@
 <div class="flex justify-between m-6">
   <div class="left">
-    <app-button></app-button>
+    <app-button [content] = "create" [text]="createText"></app-button>
   </div>
   <div class="right">
-    <app-button></app-button>
-    <app-button></app-button>
-    <app-button></app-button>
+    <app-button [content]="done" [text] = "doneText"></app-button>
+    <app-button [content]="pending" [text] = "pendingText"></app-button>
   </div>
 </div>

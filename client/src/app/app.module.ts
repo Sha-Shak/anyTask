@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ButtonComponent } from './components/button/button.component';
+import { CardFormComponent } from './components/card-form/card-form.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { CardComponent } from './components/card/card.component';
-import { CardFormComponent } from './components/card-form/card-form.component';
-import { ButtonComponent } from './components/button/button.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeadPanelComponent } from './components/head-panel/head-panel.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,11 @@ import { HeadPanelComponent } from './components/head-panel/head-panel.component
     CardComponent,
     CardFormComponent,
     ButtonComponent,
-    HeadPanelComponent
+    HeadPanelComponent,
+    ConfirmDeleteComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

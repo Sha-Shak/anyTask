@@ -1,1 +1,12 @@
-<p>card-form works!</p>
+<div class="md:mx-6 md:w-1/2 md:pr-8 w-full md:px-0 px-4">
+  <div class="border border-gray-300 p-4 space-y-2">
+    <div class="info space-y-2 relative">
+      <input type="text" placeholder="Write your task here..." name="task" id="Task"  class="border  border-gray-200 w-full  p-2 focus:outline-none "/>
+      <select name="status" id="status" class="border w-1/2 border-gray-200 p-2 text-gray-400">
+        <option value="1">Done</option>
+        <option value="2">Pending</option>
+      </select>
+      <app-button class="absolute right-0" [content] = "save"></app-button>
+    </div>
+  </div>
+</div>

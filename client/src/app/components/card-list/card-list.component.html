@@ -1,5 +1,3 @@
-<div class="flex-wrap">
-  <div *ngFor="let num of loop">
-    <app-card [num]="num" class="bg-pink-400"></app-card>
-  </div>
+<div class="md:flex flex-wrap px-4">
+  <app-card *ngFor="let num of loop" [num]="num" class="w-1/4 p-2"></app-card>
 </div>
