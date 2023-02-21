@@ -5,6 +5,7 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 import { faPencil, faCheck
 } from '@fortawesome/free-solid-svg-icons';
+import { Task } from 'src/app/interface/task';
 
 @Component({
   selector: 'app-card',
@@ -12,7 +13,7 @@ import { faPencil, faCheck
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  @Input() num!:number;
+  @Input() task!:Task;
   button = "button";
   delete = faTrashCan;
   pencil = faPencil;

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {ReactiveFormsModule} from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -25,7 +26,7 @@ import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-dele
     HeadPanelComponent,
     ConfirmDeleteComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

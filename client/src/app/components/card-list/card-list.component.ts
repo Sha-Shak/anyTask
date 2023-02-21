@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Task } from 'src/app/interface/task';
 
 @Component({
   selector: 'app-card-list',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-list.component.css']
 })
 export class CardListComponent {
-  loop: number[] = [1,2,3,4,5,6,7,8,9,10,11]
+  @Input() tasks!: Task[];
+
 }

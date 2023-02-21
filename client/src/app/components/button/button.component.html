@@ -1,7 +1,8 @@
 <button
   *ngIf="content"
-  type="button"
-  class="bg-blue-300 p-2 border border-gray-50 hover:bg-blue-400 focus:bg-blue-400 focus:border-blue-600 {{style && style}}"
+  [disabled]="disabled"
+  type="buttonType"
+  class="bg-blue-300 p-2 border border-gray-50 hover:bg-blue-400 focus:bg-blue-400 focus:border-blue-600 {{style && style}} {{disabled && gray}}"
 >
-  <fa-icon [icon]="content" class="text-gray-800"></fa-icon> {{text && text}}
+  <fa-icon [icon]="content" class="text-gray-800 "></fa-icon> {{text && text}}
 </button>

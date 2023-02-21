@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() content: any;
-  @Input() button!: string;
+  @Input() buttonType!: any;
   @Input() style!: string;
   @Input() text?: string;
+  @Input() disabled?: boolean;
+  gray = 'bg-gray-300';
 }
