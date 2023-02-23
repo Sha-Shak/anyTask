@@ -3,7 +3,7 @@
     <app-button [content] = "create" [text]="createText"></app-button>
   </div>
   <div class="right">
-    <app-button [content]="done" [text] = "doneText"></app-button>
-    <app-button [content]="pending" [text] = "pendingText"></app-button>
+    <app-button [content]="done" [text] = "doneText + '(' +doneCount+ ')'"></app-button>
+    <app-button [content]="pending" [text] = "pendingText+ '(' +pendingCount+ ')'"></app-button>
   </div>
 </div>

@@ -1,3 +1,4 @@
-<app-head-panel></app-head-panel>
-<app-card-form></app-card-form>
+<app-head-panel [tasks]="tasks" ></app-head-panel>
+<app-card-form (addTaskEvent)="addTask($event)"></app-card-form>
 <app-card-list [tasks]="tasks"></app-card-list>
+

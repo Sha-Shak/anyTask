@@ -1,8 +1,9 @@
 export interface Task{
   id: string,
   task: string,
-  status: string,
+  priority: string,
   createDate: Date;
   author: string;
+  status: boolean;
 
 }

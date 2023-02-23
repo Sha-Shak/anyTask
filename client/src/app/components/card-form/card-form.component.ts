@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
+import { Task } from 'src/app/interface/task';
 
 @Component({
   selector: 'app-card-form',
@@ -12,30 +13,36 @@ export class CardFormComponent {
   save = faFloppyDisk;
   saveText = 'Add task';
   constructor(private formBuilder: FormBuilder) {}
-  taskStatus = [
+  taskPriority = [
     {
       value: 1,
-      name: 'Pending',
+      name: 'High',
     },
     {
       value: 2,
-      name: 'Done',
+      name: 'Medium',
+    },
+    {
+      value: 3,
+      name: 'Low',
     },
   ];
-  defaultStatus = this.taskStatus[0].value;
-  test = 2;
+  defaultPriority = this.taskPriority[0].value;
   taskForm = this.formBuilder.group({
     task: ['', Validators.required],
-    status: ['', Validators.required],
+    priority: [this.taskPriority[0].value, Validators.required],
   });
+  @Output() addTaskEvent = new EventEmitter();
 
   handleSubmit() {
-    console.log("object", this.taskForm.value);
+   
+    let newTask= {...this.taskForm.value, createDate: new Date(), author: 'Shariar', status: false, id: Date.now().toString()}
+    this.addTaskEvent.emit(newTask);
     this.taskForm.reset();
   }
   ngOnInit() {
     this.taskForm.valueChanges.subscribe((form) => {
-     // console.log(form);
+      // console.log(form);
     });
   }
 }

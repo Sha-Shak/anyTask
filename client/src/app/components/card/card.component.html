@@ -1,10 +1,10 @@
-<div class="border border-gray-300 p-4 space-y-2">
+<div class="border border-gray-300 p-4 space-y-2 {{task.status && doneCard}}">
   <div class="info">
     <span class="flex">
-      <input type="checkbox" name="task" id="task{{ task.id }}" />
-      <h3 class="pl-2 text-blue-500 font-bold text-lg">{{ task.task }} New Task</h3>
+      <input type="checkbox" (change)="statusUpdate($event, task)" name="task" id="task{{ task.id }}" />
+      <h3 class="pl-2 text-blue-500 font-bold text-lg">{{ task.task }}</h3>
     </span>
-    <h6 class="text-gray-400">{{task.createDate | date}}</h6>
+    <h6 class="text-gray-400">{{ task.createDate | date }}</h6>
   </div>
   <div class="action-panel flex justify-between">
     <div class="left">
@@ -12,7 +12,7 @@
       <app-button [buttonType]="button" [content]="pencil"></app-button>
     </div>
     <div class="right">
-      <app-button  [buttonType]="button" [content]="delete"></app-button>
+      <app-button [buttonType]="button" [content]="delete"></app-button>
     </div>
   </div>
 </div>

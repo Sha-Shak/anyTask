@@ -10,31 +10,44 @@ export class DashboardComponent {
   tasks: Task[] = [
     {
       id: '1',
-
-      task: 'first task',
+      status: true,
+      task: 'Prayer',
       createDate: new Date(),
-      status: 'pending',
+      priority: 'low',
+      author: 'true',
+    },
+    {
+      id: '4',
+      status: false,
+      task: ' Windows Setup',
+      createDate: new Date(),
+      priority: 'medium',
       author: 'true',
     },
     {
       id: '2',
-
-      task: 'second task',
+      status: true,
+      task: 'Exercise',
       createDate: new Date(),
-      status: 'pending',
+      priority: 'low',
       author: 'true',
     },
 
     {
       id: '3',
-
+      status: false,
       task: 'third task',
       createDate: new Date(),
-      status: 'done',
+      priority: 'high',
       author: 'true',
     },
   ];
 
+  addTask(newTask: Task) {
+    this.tasks.push(newTask);
+    console.log(this.tasks)
+  }
+  
   // for later
   /*
   task!:{

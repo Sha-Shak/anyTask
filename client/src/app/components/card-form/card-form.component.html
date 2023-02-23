@@ -14,17 +14,21 @@
         class="border border-gray-200 w-full p-2 focus:outline-none"
       />
       <select
-        name="status"
-        formControlName="status"
-        [(ngModel)]="defaultStatus"
+        name="priority"
+        formControlName="priority"
         id="status"
         class="border w-1/2 border-gray-200 p-2 text-gray-400"
       >
-        <option *ngFor="let option of taskStatus" value="{{ option.value }}">
+        <option
+         
+          *ngFor="let option of taskPriority"
+          value="{{ option.value }}"
+        >
           {{ option.name }}
         </option>
       </select>
-      <app-button [disabled]="taskForm.invalid"
+      <app-button
+        [disabled]="taskForm.invalid"
         [buttonType]="button"
         class="absolute right-0"
         [content]="save"
